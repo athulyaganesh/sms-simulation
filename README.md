@@ -32,6 +32,9 @@ Adjust the following parameters in the configuration section of the main script:
 
 The project comes with comprehensive unit testing for each component. Run the unit tests to ensure the proper functioning of the simulation. They are named with 'Test' at the end to be easy to find. 
 
+## Future 
+If this simulation was actually function, I would have utilized the parameters in the Message class such as timestamp and origin phone number to stamp each message when it has been sent/by whom it was sent and whether it was successful or not and print each message sent/failed in a specific interval of time. For now, I have not done any work on those since it is still in the simulation stage. 
+
 ## References
 
 The implementation of this project has been  aided by insights and solutions from the community at [Stack Overflow](https://stackoverflow.com/). Special thanks to the contributors for their valuable assistance.
