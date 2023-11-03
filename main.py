@@ -10,12 +10,14 @@ def sender_thread_function(sender):
         sender.send_simulated_messages()
     except KeyboardInterrupt:
         print("Sender thread interrupted.")
+        exit(0)
 
 def progress_thread_function(progress, num_messages):
     try:
         progress.display_progress(num_messages)
     except KeyboardInterrupt:
         print("Progress thread interrupted.")
+        exit(0)
         
 
 def get_num_senders(): #Asks user to input number of senders to prepare for 

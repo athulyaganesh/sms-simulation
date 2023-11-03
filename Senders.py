@@ -39,6 +39,7 @@ class Sender:
         self.message_queue  = queue.Queue()
         self.total_time = 0
         self.lock = threading.Lock()
+    
         
     def add_msg_to_queue(self, message):
         self.message_queue.put(message) 
@@ -65,8 +66,7 @@ class Sender:
                 processing_time = max(0, random.gauss(self.mean_processing_time, 0.1)) 
                 time.sleep(processing_time)#simulates processing message 
                 self.total_time += processing_time #updates time 
-                rad = random.random() 
-                if rad < self.error_rate / 100: #simulates random failure 
+                if random.random() < self.error_rate / 100: #simulates random failure 
                     with self.lock:
                         self.failure_message += 1
                 else:

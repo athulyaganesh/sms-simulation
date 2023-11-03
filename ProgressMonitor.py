@@ -6,7 +6,12 @@ class ProgressMonitor:
             update_interval = 5 
         self.update_interval = update_interval
         self.senders_list = senders_list
+        self.running = True
     
+    def stop_display(self):
+        self.running = False 
+        return "Program Terminated."
+        
     def set_update_interval(self, update_interval):
         if update_interval < 0:
             update_interval = 5 
@@ -22,7 +27,8 @@ class ProgressMonitor:
         self.senders_list = senders 
 
     def display_progress(self, total_messages): #used to display progress (note for Athulya: , make sure to enter the total number of messages to ensure this works without causing endless loop!)
-        while True:
+        
+        while True: 
             time.sleep(self.update_interval) #simulates processing during sleep time 
             
             total_successes = sum([sender.get_successful_messages() for sender in self.senders_list]) #gets the total number of successes across all updated senders
