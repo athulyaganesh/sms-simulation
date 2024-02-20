@@ -39,6 +39,3 @@ If this simulation was actually function, I would have utilized the parameters i
 
 The implementation of this project has been  aided by insights and solutions from the community at [Stack Overflow](https://stackoverflow.com/). Special thanks to the contributors for their valuable assistance.
 
----
-
-By following the steps outlined in this README, you should be able to successfully simulate the SMS alert service for your desired use case. If you encounter any issues or have any suggestions, please feel free to let me know!
